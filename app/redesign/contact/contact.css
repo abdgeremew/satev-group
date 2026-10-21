@@ -1,0 +1,88 @@
+.rd-approved-contact-page {
+  --approved-header-h: clamp(90px, 5.25vw, 140px);
+  --approved-shell: 2200px;
+  padding-top: var(--approved-header-h);
+  background: #061b36;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.rd-approved-contact-page .rd-contact-main {
+  min-height: calc(100svh - var(--approved-header-h));
+  padding: clamp(48px, 4.5vw, 110px) 0 50px;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(22, 112, 188, .22), transparent 34%),
+    radial-gradient(circle at 14% 74%, rgba(22, 112, 188, .12), transparent 38%),
+    linear-gradient(120deg, #061b36 0%, #082a50 55%, #113d63 100%);
+}
+
+.rd-approved-contact-page .rd-contact-layout {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(40px, 5vw, 120px);
+  align-items: center;
+}
+
+.rd-approved-contact-page .rd-contact-copy .rd-label { color: #59ccff; font-size: clamp(17px, 1.02vw, 24px); letter-spacing: .2em; }
+.rd-approved-contact-page .rd-contact-copy h1 {
+  max-width: 850px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: clamp(52px, 3.7vw, 96px);
+  line-height: 1.06;
+  letter-spacing: -.04em;
+}
+.rd-approved-contact-page .rd-contact-copy > p:not(.rd-label) {
+  max-width: 750px;
+  margin-bottom: 30px;
+  color: #e2ebf5;
+  font-size: clamp(19px, 1.16vw, 30px);
+  line-height: 1.55;
+}
+.rd-approved-contact-page .rd-contact-copy > a { color: #fff; font-size: clamp(18px, 1vw, 26px); text-decoration: underline; text-underline-offset: 5px; }
+
+.rd-approved-contact-page .rd-contact-form {
+  max-width: 920px;
+  width: 100%;
+  padding: clamp(28px, 2.5vw, 56px);
+  border: 1px solid #cfe1f0;
+  border-radius: 22px;
+  background: #f8fbff;
+  box-shadow: 0 26px 70px rgba(0, 8, 25, .24);
+}
+.rd-approved-contact-page .rd-contact-form-title { font-size: clamp(24px, 1.45vw, 34px); color: #0d2c50; }
+.rd-approved-contact-page .rd-contact-form > label:not(.rd-contact-trap) { font-size: clamp(15px, .84vw, 20px); color: #193e66; }
+.rd-approved-contact-page .rd-contact-form input,
+.rd-approved-contact-page .rd-contact-form textarea,
+.rd-approved-contact-page .rd-contact-form select { min-height: 54px; font-size: clamp(16px, .88vw, 21px); background: #fff; }
+.rd-approved-contact-page .rd-contact-form textarea { min-height: 145px; }
+.rd-approved-contact-page .rd-contact-form button { min-height: 60px; background: linear-gradient(105deg, #f39812 0%, #eb6934 52%, #d73b4c 100%); font-size: clamp(16px, .9vw, 22px); }
+.rd-approved-contact-page .rd-contact-form button:hover { background: linear-gradient(105deg, #e8890c 0%, #dd5b2d 52%, #c72f43 100%); }
+
+.rd-approved-contact-page .rd-contact-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: clamp(30px, 3vw, 56px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .76);
+  border-radius: 20px;
+  background: rgba(248, 252, 255, .97);
+  box-shadow: 0 20px 45px rgba(0, 10, 30, .16);
+  color: #0d2c50;
+}
+.rd-approved-contact-page .rd-contact-stats > div { display: grid; gap: 3px; justify-content: center; padding: 16px 12px; border-right: 1px solid #cbdbe8; }
+.rd-approved-contact-page .rd-contact-stats > div:nth-child(2n) { border-right: 0; }
+.rd-approved-contact-page .rd-contact-stats > div:nth-child(-n+2) { border-bottom: 1px solid #cbdbe8; }
+.rd-approved-contact-page .rd-contact-stats strong { font-size: clamp(28px, 1.75vw, 42px); line-height: 1; }
+.rd-approved-contact-page .rd-contact-stats span { font-size: clamp(13px, .72vw, 18px); color: #315778; }
+.rd-approved-contact-page .rd-contact-back { margin: 0; padding: 22px 0; width: 100%; text-align: center; color: #e2ebf5; }
+
+@media (max-width: 900px) {
+  .rd-approved-contact-page { --approved-header-h: 74px; }
+  .rd-approved-contact-page .rd-contact-layout { grid-template-columns: 1fr; gap: 30px; }
+  .rd-approved-contact-page .rd-contact-copy h1 { max-width: 700px; }
+  .rd-approved-contact-page .rd-contact-form { max-width: none; }
+}
+
+@media (max-width: 600px) {
+  .rd-approved-contact-page .rd-contact-main { padding-top: 36px; }
+  .rd-approved-contact-page .rd-contact-copy h1 { font-size: clamp(42px, 10vw, 58px); }
+}
